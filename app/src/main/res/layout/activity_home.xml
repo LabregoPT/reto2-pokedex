@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/atraparBtn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
+        android:text="Atrapar"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonET"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pokemonET"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonET" />
+
+    <EditText
+        android:id="@+id/pokemonET"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/et_border"
+        android:paddingLeft="15dp"
+        android:hint="@string/catchAPokemon"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonRecycler"
+        app:layout_constraintStart_toStartOf="@+id/pokemonRecycler"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/listoPokemonTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Mis Pokémon"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atraparBtn" />
+
+    <EditText
+        android:id="@+id/buscarPokemonET"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/et_border"
+        android:paddingLeft="15dp"
+        android:hint="@string/searchAPokemon"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#D9D9D9"
+        app:layout_constraintBottom_toBottomOf="@+id/buscarPokmonBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listoPokemonTV" />
+
+    <Button
+        android:id="@+id/buscarPokmonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text=">"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/listoPokemonTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokemonRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buscarPokmonBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
